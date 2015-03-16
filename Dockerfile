@@ -11,7 +11,7 @@ COPY 99scala-mode2.el /etc/emacs/site-start.d/
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
 
-RUN curl -L http://apache.claz.org/kafka/0.8.1.1/kafka_2.9.2-0.8.1.1.tgz | \
+RUN curl -L http://apache.claz.org/kafka/0.8.2.1/kafka_2.9.2-0.8.2.1.tgz | \
     tar xzv -C /opt -f - && mv /opt/kafka* /opt/kafka
 ENV KAFKA_HOME /opt/kafka
 
@@ -19,7 +19,7 @@ RUN curl -L http://www.trieuvan.com/apache/hadoop/common/hadoop-2.6.0/hadoop-2.6
     tar xzv -C /opt -f - && mv /opt/hadoop* /opt/hadoop
 ENV HADOOP_HOME /opt/hadoop
 
-RUN curl -L http://mirrors.gigenet.com/apache/spark/spark-1.1.0/spark-1.1.0-bin-hadoop2.4.tgz | \
+RUN curl -L http://mirrors.gigenet.com/apache/spark/spark-1.3.0/spark-1.3.0-bin-hadoop2.4.tgz | \
     tar xzv -C /opt -f - && mv /opt/spark* /opt/spark
 ENV SPARK_HOME /opt/spark
 
