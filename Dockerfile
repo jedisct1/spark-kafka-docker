@@ -25,7 +25,7 @@ ENV SPARK_HOME /opt/spark
 
 ENV PATH /opt/hadoop/bin:/opt/kafka/bin:/opt/spark/bin:/opt/sbt/bin:$PATH
 
-RUN curl -L https://dl.bintray.com/sbt/native-packages/sbt/0.13.7/sbt-0.13.7.tgz | \
+RUN curl -L https://dl.bintray.com/sbt/native-packages/sbt/0.13.8/sbt-0.13.8.tgz | \
     tar xzv -C /opt -f -
 
 RUN sbt
