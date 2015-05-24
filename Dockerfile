@@ -1,4 +1,4 @@
-FROM ubuntu:14.10
+FROM ubuntu:15.04
 MAINTAINER Frank Denis
 
 RUN apt-get update && apt-get -y install cowsay zsh silversearcher-ag emacs24-nox jed \
