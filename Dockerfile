@@ -19,7 +19,7 @@ RUN curl -L http://www.trieuvan.com/apache/hadoop/common/hadoop-2.7.0/hadoop-2.7
     tar xzv -C /opt -f - && mv /opt/hadoop* /opt/hadoop
 ENV HADOOP_HOME /opt/hadoop
 
-RUN curl -L http://mirrors.gigenet.com/apache/spark/spark-1.3.1/spark-1.3.1-bin-hadoop2.4.tgz | \
+RUN curl -L http://mirrors.gigenet.com/apache/spark/spark-1.4.0/spark-1.4.0-bin-hadoop2.6.tgz | \
     tar xzv -C /opt -f - && mv /opt/spark* /opt/spark
 ENV SPARK_HOME /opt/spark
 
