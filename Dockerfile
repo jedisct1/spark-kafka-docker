@@ -1,10 +1,11 @@
 FROM ubuntu:15.04
 MAINTAINER Frank Denis
 
-RUN apt-get update && apt-get -y install cowsay zsh silversearcher-ag emacs24-nox jed \
-    build-essential autoconf automake libtool git wget curl supervisor
-RUN apt-get update && apt-get -y install openjdk-8-jdk maven scala
-RUN apt-get update && apt-get -y install zookeeper zookeeper-bin zookeeperd
+RUN apt-get update && apt-get -y install \
+    cowsay zsh silversearcher-ag emacs24-nox jed \
+    build-essential autoconf automake libtool git wget curl supervisor \
+    openjdk-8-jdk maven scala \
+    zookeeper zookeeper-bin zookeeperd
 
 RUN mkdir -p /opt/el ; cd /opt/el && git clone git://github.com/hvesalai/scala-mode2.git
 COPY 99scala-mode2.el /etc/emacs/site-start.d/
