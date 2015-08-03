@@ -17,11 +17,11 @@ RUN curl -L http://apache.claz.org/kafka/0.8.2.1/kafka_2.9.2-0.8.2.1.tgz | \
     tar xzv -C /opt -f - && mv /opt/kafka* /opt/kafka
 ENV KAFKA_HOME /opt/kafka
 
-RUN curl -L http://www.trieuvan.com/apache/hadoop/common/hadoop-2.7.0/hadoop-2.7.0.tar.gz | \
+RUN curl -L http://www.trieuvan.com/apache/hadoop/common/hadoop-2.7.1/hadoop-2.7.1.tar.gz | \
     tar xzv -C /opt -f - && mv /opt/hadoop* /opt/hadoop
 ENV HADOOP_HOME /opt/hadoop
 
-RUN curl -L http://mirrors.gigenet.com/apache/spark/spark-1.4.0/spark-1.4.0-bin-hadoop2.6.tgz | \
+RUN curl -L http://mirrors.gigenet.com/apache/spark/spark-1.4.1/spark-1.4.1-bin-hadoop2.6.tgz | \
     tar xzv -C /opt -f - && mv /opt/spark* /opt/spark
 ENV SPARK_HOME /opt/spark
 
