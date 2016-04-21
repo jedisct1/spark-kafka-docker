@@ -1,4 +1,4 @@
-FROM ubuntu:15.10
+FROM ubuntu:16.04
 MAINTAINER Frank Denis
 
 RUN apt-get update && apt-get -y install \
@@ -17,17 +17,17 @@ RUN curl -L http://apache.claz.org/kafka/0.8.2.2/kafka_2.9.2-0.8.2.2.tgz | \
     tar xzv -C /opt -f - && mv /opt/kafka* /opt/kafka
 ENV KAFKA_HOME /opt/kafka
 
-RUN curl -L http://www.trieuvan.com/apache/hadoop/common/hadoop-2.7.1/hadoop-2.7.1.tar.gz | \
+RUN curl -L http://www.trieuvan.com/apache/hadoop/common/hadoop-2.7.2/hadoop-2.7.2.tar.gz | \
     tar xzv -C /opt -f - && mv /opt/hadoop* /opt/hadoop
 ENV HADOOP_HOME /opt/hadoop
 
-RUN curl -L http://mirrors.gigenet.com/apache/spark/spark-1.5.1/spark-1.5.1-bin-hadoop2.6.tgz | \
+RUN curl -L http://mirrors.gigenet.com/apache/spark/spark-1.6.1/spark-1.6.1-bin-hadoop2.6.tgz | \
     tar xzv -C /opt -f - && mv /opt/spark* /opt/spark
 ENV SPARK_HOME /opt/spark
 
 ENV PATH /opt/hadoop/bin:/opt/kafka/bin:/opt/spark/bin:/opt/sbt/bin:$PATH
 
-RUN curl -L https://dl.bintray.com/sbt/native-packages/sbt/0.13.9/sbt-0.13.9.tgz | \
+RUN curl -L https://dl.bintray.com/sbt/native-packages/sbt/0.13.11/sbt-0.13.11.tgz | \
     tar xzv -C /opt -f -
 
 RUN sbt
