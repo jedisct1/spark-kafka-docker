@@ -17,7 +17,7 @@ RUN curl -L http://apache.claz.org/kafka/0.8.2.2/kafka_2.9.2-0.8.2.2.tgz | \
     tar xzv -C /opt -f - && mv /opt/kafka* /opt/kafka
 ENV KAFKA_HOME /opt/kafka
 
-RUN curl -L http://www.trieuvan.com/apache/hadoop/common/hadoop-2.7.2/hadoop-2.7.2.tar.gz | \
+RUN curl -L http://www.trieuvan.com/apache/hadoop/common/hadoop-2.7.3/hadoop-2.7.3.tar.gz | \
     tar xzv -C /opt -f - && mv /opt/hadoop* /opt/hadoop
 ENV HADOOP_HOME /opt/hadoop
 
